@@ -1,0 +1,9 @@
+
+dWeb:AvoidCommentedOutCodeCheck>"Remove this commented out code.(‹òá¤ıÿÿÿÿHÊRMAJORZ
+CODE_SMELL
+{ Web:TableHeaderHasIdOrScopeChecka";Add either an 'id' or a 'scope' attribute to this <th> tag.(Ô¥ÿ’øÿÿÿÿHËRMAJORZBUG
+WWeb:BoldAndItalicTagsCheckT"Replace this <i> tag by <em>.(¸²êáıÿÿÿÿHÌRMINORZBUG
+{ Web:TableHeaderHasIdOrScopeCheckd";Add either an 'id' or a 'scope' attribute to this <th> tag.(˜©©ÜøÿÿÿÿHÍRMAJORZBUG
+v Web:TableHeaderHasIdOrScopeCheckc";Add either an 'id' or a 'scope' attribute to this <th> tag.(²±µ›HÎRMAJORZBUG
+{ Web:TableHeaderHasIdOrScopeChecke";Add either an 'id' or a 'scope' attribute to this <th> tag.(ã½·ûÿÿÿÿHÏRMAJORZBUG
+{ Web:TableHeaderHasIdOrScopeCheckb";Add either an 'id' or a 'scope' attribute to this <th> tag.(Ÿç£™ÿÿÿÿÿHĞRMAJORZBUG

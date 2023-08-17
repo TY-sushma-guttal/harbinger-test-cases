@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<!--<meta charset="UTF-8" />-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<link rel="stylesheet" href="../static/css/styles.css" />
+<script type="text/javascript" th:src="@{/js/actions.js}"></script>
+<title>Home Delivery</title>
+</head>
+
+<body>
+	<nav class="navbar header w-100">
+		<div class="px-5">
+			<h3>Select Delivery Partner</h3>
+		</div>
+	</nav>
+	<script type="text/javascript">
+	var today = new Date().toISOString().split('T')[0];
+	document.getElementsByName("requiredToDate")[0].setAttribute('min', today);</script>
+	<div class="px-5 py-3 layout">
+		<div class="h-100">
+			<div class="table responsive">
+				<table class="table table-bordered table-striped">
+					<thead>
+						<tr></tr>
+					</thead>
+					<tbody id="table-body">
+						<tr th:each="partner: ${partners}">
+							<td th:text="${partner.deliveryPartnerName}"
+								data-toggle="tooltip" data-placement="top"
+								th:title="'Available From: ' + ${#temporals.format(partner.availableFrom, 'dd-MMM-yyyy HH:mm:ss')} + '  Available To: '+${#temporals.format(partner.availableTo, 'dd-MMM-yyyy HH:mm:ss')}" />
+							<td>
+								<form method="POST"
+									th:action="@{/delivery-partner/assign/delivery}">
+									<input type="hidden" name="userId" id="userId"
+										th:value="${partner.users[0].userId}" th:required="required" />
+									<input type="hidden" name="deliveryPartnerId"
+										id="deliveryPartnerId" th:value="${partner.deliveryPartnerId}"
+										th:required="required" /> <label>From Date : </label> <input
+										type="date" name="requiredFromDate" id="requiredFromDate"
+										th:value="20-01-2022" th:required="required" /> <label>To
+										Date : </label> <input type="date" name="requiredToDate"
+										id="requiredToDate" th:value="20-01-2022"
+										th:required="required" /> <label>From Time : </label> <input
+										type="time" name="requiredFromTime" id="requiredFromTime"
+										th:required="required" /> <label>To Time : </label> <input
+										type="time" name="requiredToTime" id="requiredToTime"
+										th:required="required" /> <input type="hidden"
+										name="userAddress" id="userAddress"
+										th:value="${partner.users[0].userAddressList[0].address}"
+										required />
+									<button type="submit" name="submit" value="value"
+										class="btn btn-secondary">Assign the delivery</button>
+								</form>
+							</td>
+					</tbody>
+				</table>
+			</div>
+			<div th:if="${message}" th:text="${message}"
+				th:class="${'alert ' + alertClass}" />
+		</div>
+</body>
+
+</html>

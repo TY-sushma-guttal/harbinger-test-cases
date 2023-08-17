@@ -1,0 +1,36 @@
+<div class="col-12 fluid-container flex-row d-flex ">
+  <div class="col-6 login-page-img">
+    <img src="../../assets/12291400_Wavy_Tsp-05_Single-09.png" alt="">
+  </div>
+  <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+    <div *ngIf="isLogin">
+      <h2 class="text-center text-dark mb-3">Login</h2>
+    </div>
+    <div *ngIf="isLogin" class="text-center">
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <input class="my-2 ps-3 py-2 rounded" type="text" formControlName="vehicle_phone_no"
+          placeholder="Vehicle No."><br>
+        <input class="my-2 ps-3 py-2 rounded" type="password" formControlName="password" placeholder="Password"><br>
+        <button class="my-2 btn loginBtn" type="submit">Login</button>
+        <p class="text-center" (click)="isLoginCheck()">Don't have an Account? <b>Register</b></p>
+        <p class="text-center text-danger">{{errorMsg | titlecase}}</p>
+      </form>
+    </div>
+    <div *ngIf="!isLogin">
+      <h2 class="text-center text-dark mb-3">Register</h2>
+    </div>
+    <div *ngIf="!isLogin" class="text-center">
+      <form [formGroup]="registerForm" (ngSubmit)="register(registerForm.value)">
+        <input class="my-2 ps-3 py-2" type="text" formControlName="name" placeholder="Name"><br>
+        <input class="my-2 ps-3 py-2" type="text" formControlName="mobileNo" placeholder="Phone No."><br>
+        <input class="my-2 ps-3 py-2" type="text" formControlName="vehicleType" placeholder="Vehicle Type"><br>
+        <input class="my-2 ps-3 py-2" type="text" formControlName="vehicleNo" placeholder="Vehicle No."><br>
+        <input class="my-2 ps-3 py-2" type="text" formControlName="address" placeholder="Address"><br>
+        <input class="my-2 ps-3 py-2" type="text" formControlName="password" placeholder="Password"><br>
+        <button class="my-2 btn loginBtn" type="submit">Register</button>
+        <p class="text-center" (click)="isLoginCheck()">Already have an Account? <b>Login</b></p>
+        <p class="text-center font-weight-bold text-danger">{{errorMsg | titlecase}}</p>
+      </form>
+    </div>
+  </div>
+</div>

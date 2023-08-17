@@ -1,0 +1,77 @@
+.kyan-img {
+  height: 5vh;
+  width: 6vw;
+}
+
+.logout-img {
+  height: 4vh;
+  width: 4vw;
+}
+
+.search-btn {
+  background-color: #414783;
+  color: #ffff;
+  border: 1px solid #383D71;
+  border-radius: 12px;
+  height: 6vh;
+  width: 10vw;
+  transform: translate(-11vw, -0.5vh);
+}
+
+input {
+  height: 7vh;
+  width: 75vw;
+  background: #FAFAFA 0% 0% no-repeat padding-box;
+  border: 1px solid #C7C7C7;
+  border-radius: 24px;
+  opacity: 1;
+}
+
+table {
+  width: 100%;
+}
+
+::ng-deep .mat-tab-header {
+  width: 80vw;
+}
+
+.modal-title {
+  font-size: larger;
+  letter-spacing: 0px;
+  color: #414783;
+  font-weight: bolder;
+  opacity: 1;
+}
+
+.title {
+  text-align: right;
+  letter-spacing: 0px;
+  color: #1F1E20;
+  opacity: 0.8;
+}
+
+.description {
+  text-align: left;
+  letter-spacing: 0px;
+  color: #1F1E20;
+  opacity: 1;
+}
+
+.pay-lable {
+  font: normal normal medium 24px/37px Sofia Pro;
+  letter-spacing: 0px;
+  color: #414783;
+  opacity: 1;
+}
+
+.pay-btn {
+  background: #414783 0% 0% no-repeat padding-box;
+  border: 1px solid #383D71;
+  border-radius: 15px;
+  opacity: 2;
+  color: white;
+}
+
+.primary-btn {
+  background: #414783;
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="D:\Harbinger-Use Case Development\Phase II\Java-Angular\Java and Angular\CourtsAtHome Application\court-at-home"/>
+			<item value="D:\Harbinger-Use Case Development\Rent Book App\Git Solution\tyss_hg_Library_Rent_Book_Application_JavaSpringBoot_Solution"/>
+			<item value="D:\Harbinger-Use Case Development\Home Delivery App\tyss_hg_java_springboot_homedelivery_app_q1_solution"/>
+			<item value="D:\Harbinger-Use Case Development\Rent Book App\Git Question Template\tyss_hg_Library_Rent_Book_Application_JavaSpringBoot_Question_Template"/>
+			<item value="D:\StrongerMe\StrongerMeCode(10-01-22)\strongame_backend_springboot\strongameapp"/>
+			<item value="D:\Harbinger-Use Case Development\Phase II\Thymeleaf\FindHouse Application\git-solution\tyss_findhouse_springboot"/>
+			<item value="D:\Harbinger-Use Case Development\Home Delivery App\tyss_hg_java_springboot_homedelivery_app_q1_solution\demo"/>
+			<item value="D:\Harbinger-Use Case Development\Phase II\Thymeleaf\FindHouse Application\find-house"/>
+			<item value="D:\Harbinger-Use Case Development\Phase II\Thymeleaf\tyss_findhouse_springboot"/>
+			<item value="D:\Harbinger-Use Case Development\Phase II\Thymeleaf\donation"/>
+			<item value="D:\Harbinger-Use Case Development\Phase II\Thymeleaf\springbootThymeleafDonation"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

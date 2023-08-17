@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Contact Manager</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.13.1/datatables.min.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+
+
+	<style>
+		a {
+			color: rgb(192, 192, 192) !important;
+		}
+
+		a:hover {
+			color: rgb(255, 255, 255) !important;
+			background: rgb(0, 128, 192) !important;
+		}
+
+		#example_previous {
+			padding-right: 20px !important;
+			color: black !important;
+		}
+
+		#example_paginate>span>a {
+			padding-right: 10px !important;
+			color: black !important;
+		}
+
+		#example_next {
+			padding-left: 20px !important;
+			color: black !important;
+		}
+	</style>
+
+
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark data-bs-theme=" dark"">
+		<div class="container-fluid">
+			<h1 class="navbar-brand">CONTACT MANAGER</h1>
+			<div class="collapse navbar-collapse" id="navbarText">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				</ul>
+				<span class="navbar-text">
+					<a class="navbar-brand" th:href="@{/}">HOME</a>
+				</span>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container-fluid">
+		<div class="row flex-nowrap">
+			<div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+				<div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+					<h2 class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-light text-decoration-none">
+						<span class="fs-5 d-none d-sm-inline">Menu</span>
+					</h2>
+					<ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+						id="menu">
+						<li class="nav-item">
+							<a data-bs-toggle=" collapse" class="nav-link px-0 align-middle" th:href="@{/list}">
+								<span class="ms-1 d-none d-sm-inline">Show Contacts</span> </a>
+						</li>
+						<li>
+							<a data-bs-toggle=" collapse" class="nav-link px-0 align-middle"
+								th:href="@{showAddContactForm}">
+								<span class="ms-1 d-none d-sm-inline">Add Contacts</span> </a>
+						</li>
+						<li>
+							<a data-bs-toggle=" collapse" class="nav-link px-0 align-middle" th:href="@{/home}">
+								<span class="ms-1 d-none d-sm-inline">Exit</span></a>
+						</li>
+					</ul>
+					<hr>
+
+				</div>
+			</div>
+
+			<div class="col py-3">
+				<div class="container-fluid col-auto col-xs-12 col-centered">
+					<h2>List Contacts</h2>
+					<hr />
+					<table id="example" class="table table-bordered table-striped table-responsive">
+						<caption>Find And Manage Your Contacts Here</caption>
+						<thead>
+							<tr>
+								<th>Sl.No.</th>
+								<th>Name</th>
+								<th>Email</th>
+								<th>Phone No</th>
+								<th>Image</th>
+								<th>Description</th>
+								<th>Address</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="imageGallery,iterationStatus : ${images}">
+								<td class="align-middle" th:text="${iterationStatus.count}"></td>
+								<td class="align-middle" th:text="${imageGallery.name}"></td>
+								<td class="align-middle" th:text="${imageGallery.email}"></td>
+								<td class="align-middle" th:text="${imageGallery.phoneNo}"></td>
+								<td><img th:src="@{${'/contact/display/'+ imageGallery.id}}" class="rounded-circle"
+										width="100" height="80" alt="" /></td>
+								<td class="align-middle" th:text="${imageGallery.description}"></td>
+								<td class="align-middle" th:text="${imageGallery.address}"></td>
+								<td class="align-middle"><a th:href="@{/showUpdateForm(email=${imageGallery.email})}"
+										class="btn btn-success text-right">Update</a>
+									<a th:href="@{/delete(email=${imageGallery.email})}"
+										class="btn btn-danger text-right">Delete</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+				integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+				crossorigin="anonymous"></script>
+
+
+			<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.13.1/datatables.min.js"></script>
+
+
+			<script>
+				$(document).ready(function () {
+					$("#example").DataTable({
+						'aoColumnDefs': [{
+							'bSortable': false,
+							'aTargets': [-1]
+						}]
+					});
+				})
+
+			</script>
+</body>
+
+</html>

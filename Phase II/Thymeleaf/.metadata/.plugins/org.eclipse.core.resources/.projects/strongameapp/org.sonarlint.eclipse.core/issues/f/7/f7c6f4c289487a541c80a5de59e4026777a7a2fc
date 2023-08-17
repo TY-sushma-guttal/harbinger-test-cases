@@ -1,0 +1,21 @@
+
+g
+java:S1128"6Remove this unused import 'lombok.AllArgsConstructor'.(´œ¾öùÿÿÿÿHÔRMINORZ
+CODE_SMELL
+r	java:S107e"BConstructor has 13 parameters, which is greater than 7 authorized.(üÉ™ÁúÿÿÿÿHÖRMAJORZ
+CODE_SMELL
+[
+java:S1948O",Make "coachPlans" transient or serializable.(ÄıÒëH×RCRITICALZ
+CODE_SMELL
+a
+java:S1128"5Remove this unused import 'lombok.NoArgsConstructor'.(¸¨›HØRMINORZ
+CODE_SMELL
+G
+java:S17003"Rename field "coachDetails"(Ö¼ñHÚRMAJORZ
+CODE_SMELL
+g
+java:S1172g"6Remove this unused method parameter "noOfUserTrained".(Â“Ê©üÿÿÿÿHÛRMAJORZ
+CODE_SMELL
+`
+java:S1948c"1Make "coachHomeBanner" transient or serializable.(ïÁ…»HİRCRITICALZ
+CODE_SMELL

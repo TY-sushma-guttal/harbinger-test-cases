@@ -1,0 +1,16 @@
+
+X
+java:S1068",Remove this unused "bookName" private field.(é“ØûHÕRMAJORZ
+CODE_SMELL
+Š
+java:S1450"WRemove the "bookName" field and declare it as a local variable in the relevant methods.(é“Øû8Å‘Å×Ú0H€RMINORZ
+CODE_SMELL
+…
+java:S1192)"JDefine a constant instead of duplicating this literal "errorPage" 3 times.(¦ùÎóıÿÿÿÿ8Å‘Å×Ú0HRCRITICALZ
+CODE_SMELL
+
+java:S1192&"KDefine a constant instead of duplicating this literal "totalPages" 3 times.(‘°µó8Å‘Å×Ú0H…RCRITICALZ
+CODE_SMELL
+‡
+java:S1192%"LDefine a constant instead of duplicating this literal "currentPage" 3 times.(ÃÈéüÿÿÿÿ8Å‘Å×Ú0H‰RCRITICALZ
+CODE_SMELL

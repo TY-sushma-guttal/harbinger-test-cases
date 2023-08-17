@@ -1,0 +1,10 @@
+
+k	java:S125"<This block of commented-out lines of code should be removed.(Ç¿«úÿÿÿÿH	RMAJORZ
+CODE_SMELL
+f	java:S125"<This block of commented-out lines of code should be removed.(ãÉåH
+RMAJORZ
+CODE_SMELL
+f	java:S125!"<This block of commented-out lines of code should be removed.(›´ºƒHRMAJORZ
+CODE_SMELL
+„	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ËƒÍèHRMINORZ
+CODE_SMELL

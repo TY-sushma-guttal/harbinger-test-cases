@@ -1,0 +1,5 @@
+
+l	java:S1258"<This block of commented-out lines of code should be removed.(«§ÑåúÿÿÿÿHÎRMAJORZ
+CODE_SMELL
+h
+java:S3655(">Call "findByVehicleNo.isPresent()" before accessing the value.(ãðÑðøÿÿÿÿHÖRMAJORZBUG
